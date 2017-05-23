@@ -100,6 +100,20 @@ video {
   font-style: normal;
   font-weight: normal;
 }
+/* font-family: "DINPro"; */
+@font-face {
+  font-family: "DinPro-Bold";
+  src: url("../fonts/DINPro/dinpro-bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "DINProRegular"; */
+@font-face {
+  font-family: "DinPro-Regular";
+  src: url("../fonts/DINPro/DINPro.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
 html {
   width: 100%;
   height: 100%;
@@ -152,7 +166,7 @@ a:hover {
 }
 .logo-description {
   display: inline-block;
-  font-family: 'MagistralC-Bold', sans-serif;
+  font-family: 'DinPro-Regular', sans-serif;
   font-size: 38px;
   line-height: 53px;
   color: #fff;

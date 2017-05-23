@@ -37,12 +37,32 @@ time, mark, audio, video {
   font-style: normal;
   font-weight: normal;
 }
+/* font-family: "DINPro"; */
+@font-face {
+  font-family: "DinPro-Bold";
+  src: url("../fonts/DINPro/dinpro-bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "DINProRegular"; */
+@font-face {
+  font-family: "DinPro-Regular";
+  src: url("../fonts/DINPro/DINPro.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
 
 .magistralc(){
   font-family: 'MagistralC', sans-serif;
 }
 .magistralc-bold(){
   font-family: 'MagistralC-Bold', sans-serif;
+}
+.dinpro-bold(){
+  font-family: 'DinPro-Bold', sans-serif;
+}
+.dinpro-regular(){
+  font-family: 'DinPro-Regular', sans-serif;
 }
 
 @color-primary: #e2e2e2;
@@ -105,7 +125,9 @@ a, a:hover {
 }
 .logo-description{
   display: inline-block;
-  .magistralc-bold();
+  //.magistralc-bold();
+  //.dinpro-bold();
+  .dinpro-regular();
   font-size: 38px;
   line-height: 53px;
   color: @color-advanced;
