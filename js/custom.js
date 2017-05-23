@@ -153,4 +153,28 @@ $(document).ready(function(){
         DG.entrance(options).addTo(map).show(true);
         //http://api.2gis.ru/doc/maps/ru/manual/dg-entrance/#entrance-options
     });
+
+    $('.owl-carousel').owlCarousel(
+        {
+            loop: true, //Зацикливаем слайдер
+            items: 1, //количество элементов в слайдере
+            margin: 50, //Отступ от элемента справа в 50px
+            nav: false, //Отключение навигации
+            navText: ["<", ">"], //надписи на кнопках навигации
+            autoplay: true, //Автозапуск слайдера
+            smartSpeed: 1000, //Время движения слайда
+            autoplayTimeout: 15000, //Время смены слайда
+            autoplayHoverPause: true, //остановить при наведении мыши
+            touchDrag: true, //перелистывание касанием на телефоне/планшете
+            dotsContainer: '.owl-dots' //контейнер для навигационных точек
+        }
+    );
+    $('.slider-prev').click( function() {
+        console.log('+++');
+        $('.owl-carousel').trigger('prev.owl.carousel',[300]);
+    });
+    $('.slider-next').click( function() {
+        console.log('---');
+        $('.owl-carousel').trigger('next.owl.carousel',[300]);
+    });
 });

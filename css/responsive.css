@@ -278,6 +278,19 @@
   .discount-description-left-inner {
     margin-top: 60px;
   }
+  .feedback-slider {
+    height: 380px;
+  }
+  .slide {
+    height: 350px;
+  }
+  .slider-next,
+  .slider-prev {
+    display: none;
+  }
+  .feedback-slider-wrapper {
+    width: 100%;
+  }
   .partners-icon5 {
     background-size: 90% 70%;
   }
@@ -634,6 +647,29 @@
     font-size: 30px;
     line-height: 35px;
     margin-top: 25px;
+  }
+  .feedback-slider {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 340px;
+    margin-bottom: 35px;
+  }
+  .slide {
+    padding: 25px;
+    height: 300px;
+  }
+  .feedback-title {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .feedback-autor {
+    top: -13px;
+    left: 20px;
+    font-size: 20px;
+  }
+  .feedback-text {
+    font-size: 18px;
+    line-height: 20px;
   }
   .partners-title {
     font-size: 25px;
