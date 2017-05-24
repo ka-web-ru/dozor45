@@ -1,15 +1,15 @@
-
+<?php include 'core/dc.php';
+$revs = $dc->GetReviews(1);
+?>
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-  
+	<title><?= $dc->GetSetting('title') ?></title>
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ЧОП Дозор</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="KA-WEB">
+	<meta name="keywords" content="<?= $dc->GetSetting('keys') ?>">
+	<meta name="description" content="<?= $dc->GetSetting('desc') ?>">
     
     <!--Favicons-->   
     <!--<link rel="icon" href="img/favicon.png">-->
@@ -405,41 +405,31 @@
         </div>
     </div>
     <div class="feedback-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h2 class="feedback-title">ОТЗЫВЫ КЛИЕНТОВ</h2>
-                </div>
-                <div class="col-xs-12 feedback-slider">
-                    <span class="slider-prev"> < </span>
-                    <div class="feedback-slider-wrapper">
-                        <div class="owl-carousel">
-                            <div class="slide">
-                                <span class="feedback-autor">Анна</span>
-                                <span class="feedback-text">
-                                    Позвонила, проконсультировали. Смонтировали беспроводное
-                                    оборудование, так как не нужны лишние ключи и клавиатуры.
-                                    Управляю с мобильного приложения, настроили информирование
-                                    об отключении 220, если что push уведомление всплывает - теперь знаю
-                                    когда и насколько. Спасибо.
-                                </span>
-                            </div>
-                            <div class="slide">
-                                <span class="feedback-autor">Анна</span>
-                                <span class="feedback-text">
-                                    Позвонила, проконсультировали. Смонтировали беспроводное
-                                    оборудование, так как не нужны лишние ключи и клавиатуры.
-                                    Управляю с мобильного приложения, настроили информирование
-                                    об отключении 220, если что push уведомление всплывает - теперь знаю
-                                    когда и насколько. Спасибо.
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <span class="slider-next"> > </span>
-                </div>
-            </div>
-        </div>
+		<?php if(count($revs)): ?>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<h2 class="feedback-title">ОТЗЫВЫ КЛИЕНТОВ</h2>
+					</div>
+					<div class="col-xs-12 feedback-slider">
+						<span class="slider-prev"> < </span>
+						<div class="feedback-slider-wrapper">
+							<div class="owl-carousel">
+								<?php foreach($revs as $rev): ?>
+									<div class="slide">
+										<span class="feedback-autor"><?= $rev->name; ?></span>
+									<span class="feedback-text">
+										<?= $rev->post;?>
+									</span>
+									</div>
+								<?php endforeach;?>
+							</div>
+						</div>
+						<span class="slider-next"> > </span>
+					</div>
+				</div>
+			</div>
+		<?php endif ?>
     </div>
     <div class="partners-wrapper">
         <div class="container">
