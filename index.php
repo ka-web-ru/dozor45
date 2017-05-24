@@ -47,8 +47,8 @@ $revs = $dc->GetReviews(1);
                 <div class="col-lg-6 col-md-5 col-sm-3 col-xs-2">
                     <div class="header-contacts">
                         <span class="header-phone-address">
-                        <span class="phone-code">(3522)</span> 55-90-02</br>
-                            <span class="address">ул. Сибирская, 8, ст.1</span>
+                        <span class="phone-code"><?= $dc->GetSetting('phonecode') ?></span> <?= $dc->GetSetting('phone1') ?></br>
+                            <span class="address"><?= $dc->GetSetting('address') ?></span>
                         </span>
                     </div>
                 </div>
@@ -484,12 +484,24 @@ $revs = $dc->GetReviews(1);
             </div>
             <div class="col-sm-6 col-xs-12">
                 <div class="contacts-wrapper">
-                    <span class="contacts-address-text text-string">ул. Сибирская, 8, стр. 1</span>
-                    <span class="contacts-tel1 text-string">(3522) 55-90-02</span>
+                    <span class="contacts-address-text text-string"><?= $dc->GetSetting('address') ?></span>
+<!--                    <span class="contacts-tel1 text-string">-->
+<!--						--><?//=$dc->GetSetting('phonecode') ? '(' . $dc->GetSetting("phonecode").')' : '' ?><!-- -->
+<!--						--><?//= $dc->GetSetting('phone1') ?>
+<!--					</span>-->
+					 <span class="contacts-tel1 text-string">
+						<?=$dc->GetSetting('phonecode') ? $dc->GetSetting("phonecode") : '' ?>
+						<?= $dc->GetSetting('phone1') ?>
+					</span>
                     <!--<span class="contacts-tel2 text-string">55-90-02</span>-->
-                    <span class="contacts-tel3 text-string">24-00-21</span>
-                    <span class="contacts-email text-string">info@dozor45.ru</span>
-                    <span class="contacts-vk text-string">vk.com/public142786921</span>
+					<?php if($dc->GetSetting('phone2')): ?>
+						<span class="contacts-tel2 text-string"><?= $dc->GetSetting('phone2') ?></span>
+					<?php endif; ?>
+					<?php if($dc->GetSetting('phone3')): ?>
+						<span class="contacts-tel3 text-string"><?= $dc->GetSetting('phone3') ?></span>
+					<?php endif; ?>
+                    <span class="contacts-email text-string"><?= $dc->GetSetting('mail') ?></span>
+                    <span class="contacts-vk text-string"><?= $dc->GetSetting('vk') ?></span>
                 </div>
             </div>
         </div>

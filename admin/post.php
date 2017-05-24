@@ -117,4 +117,30 @@ if($_POST['type'] == 'logout')
 	$dc->Logout();
 	$item['r'] = 's';
 }
+if($_POST['type'] == 'accaunt')
+{
+	$login = $_POST['login'];
+	$pass = $_POST['pass'];
+	if($dc->AddSetting('login', $login) && $dc->AddSetting('password', $pass))
+		$item['r'] = 's';
+}
+if($_POST['type'] == 'contacts')
+{
+	$address = $_POST['address'];
+	$phonecode = $_POST['phonecode'];
+	$phone1 = $_POST['phone1'];
+	$phone2 = $_POST['phone2'];
+	$phone3 = $_POST['phone3'];
+	$mail = $_POST['mail'];
+	$vk = $_POST['vk'];
+	if($dc->AddSetting('address', $address)
+		&& $dc->AddSetting('phonecode', $phonecode)
+		&& $dc->AddSetting('phone1', $phone1)
+		&& $dc->AddSetting('phone2', $phone2)
+		&& $dc->AddSetting('phone3', $phone3)
+		&& $dc->AddSetting('mail', $mail)
+		&& $dc->AddSetting('vk', $vk)
+	)
+		$item['r'] = 's';
+}
 echo json_encode($item);

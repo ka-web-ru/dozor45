@@ -31,8 +31,8 @@ header { position: relative; position: fixed; top: 0; left: 0; right: 0; z-index
 .sidebar { float: right; width: 201px; height: 100%; position: fixed; top: 0; padding-top: 50px; margin-left: 797px; }
 #content { margin-left: 200px; height: 100%; position: relative; padding: 10px; }
 .userbar { width: 200px; height: 100%; position: fixed; background: #5a8fbb; float: left; }
-aside > a { display: block; padding: 10px; color: #fff; }
-aside > a:not(.sel):hover, aside > a:not(.sel):active, aside > a:not(.sel):focus { background: #fff; text-decoration: none; color: #44749d; }
+aside > a { display: block;width:100%; padding: 10px; color: #fff; }
+aside > a:not(.sel):hover, aside > a:not(.sel):active, aside > a:not(.sel):focus { background: #fff;border-right:1px solid #5a8fbb; text-decoration: none; color: #44749d; }
 aside > a.sel { background: rgba(0, 0, 0, 0.1); text-decoration: none; color: #fff; }
 
 #error { display: none; position: fixed; bottom: 0; left: 200px; right: 0; padding: 10px; height: 25%; z-index: 10; background: -webkit-repeating-linear-gradient(45deg, #bc6060, #bc6060 10px, #984646 10px, #984646 20px); background: repeating-linear-gradient(45deg, #bc6060, #bc6060 10px, #984646 10px, #984646 20px); }
@@ -77,3 +77,18 @@ aside > a.sel { background: rgba(0, 0, 0, 0.1); text-decoration: none; color: #f
 .gImage > div img {vertical-align:middle;}
 .gImage i {cursor:pointer;position:absolute;top:0;right:0;opacity:0.5;padding:5px;font-size:24px;}
 .gImage i:hover {opacity:1;color:#a51515;}
+
+#iPhoneCode{
+    width: 15%;
+}
+#iPhone1,
+#iPhone2,
+#iPhone3{
+    width: 30%;
+}
+#iMail{
+    width: 50%;
+}
+#iVK{
+    width: 50%;
+}

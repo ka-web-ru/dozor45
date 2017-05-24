@@ -8,9 +8,17 @@
 <!--			<i class="fa fa-image"></i> -->
 <!--			Галерея-->
 <!--		</a>-->
-		<a href="/admin/reviews.php" <?php if($dc->IsUrl('reviews.php')): ?> class="sel"<?php endif ?><!
+		<a href="/admin/contacts.php" <?php if($dc->IsUrl('contacts.php')): ?> class="sel"<?php endif ?>
+		<i class="fa fa fa-phone" aria-hidden="true"></i>
+		Контакты
+		</a>
+		<a href="/admin/reviews.php" <?php if($dc->IsUrl('reviews.php')): ?> class="sel"<?php endif ?>
 			<i class="fa fa-comment-o"></i>
 			Отзывы
+		</a>
+		<a href="/admin/accaunt.php" <?php if($dc->IsUrl('accaunt.php')): ?> class="sel"<?php endif ?>
+			<i class="fa fa-key" aria-hidden="true"></i>
+			Сменить пароль
 		</a>
 	</aside>
 </div>

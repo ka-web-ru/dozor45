@@ -286,5 +286,64 @@ var admin =
 					processData: false
 			}, 'json');
 		}
+	},
+	UpdateAccaunt: function()
+	{
+		var login = $("#iLog").val();
+		var pass = $("#iPass").val();
+		$.ajax(
+			{
+				type:"POST", cache: false, url: "/admin/post.php",
+				data: {type: 'accaunt', login: login, pass: pass},
+				success: function(res)
+				{
+					if(res.r)
+					{
+						if(res.r == 'f')
+							admin.Error(res.error);
+						else
+							location.reload();
+					}
+					else
+						admin.Error(res);
+				},
+				error: function(res)
+				{
+					admin.Error(res.responseText);
+				}
+			});
+	},
+	UpdateContacts: function()
+	{
+		var address = $("#iAddress").val();
+		var phonecode = $("#iPhoneCode").val();
+		var phone1 = $("#iPhone1").val();
+		var phone2 = $("#iPhone2").val();
+		var phone3 = $("#iPhone3").val();
+		var mail = $("#iMail").val();
+		var vk = $("#iVK").val();
+		$.ajax(
+			{
+				type:"POST", cache: false, url: "/admin/post.php",
+				data: {type: 'contacts', address: address, phonecode: phonecode, phone1: phone1, phone2: phone2, phone3: phone3, mail: mail, vk: vk,},
+				success: function(res)
+				{
+					if(res.r)
+					{
+						if(res.r == 'f')
+							admin.Error(res.error);
+						else
+							location.reload();
+					}
+					else
+						admin.Error(res);
+				},
+				error: function(res)
+				{
+					admin.Error(res.responseText);
+				}
+			});
 	}
+
+
 }
