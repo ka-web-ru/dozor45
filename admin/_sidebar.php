@@ -16,6 +16,10 @@
 			<i class="fa fa-comment-o"></i>
 			Отзывы
 		</a>
+		<a href="/admin/discont.php" <?php if($dc->IsUrl('discont.php')): ?> class="sel"<?php endif ?>
+			<i class="fa fa-thumbs-o-up"></i>
+			Акции
+		</a>
 		<a href="/admin/accaunt.php" <?php if($dc->IsUrl('accaunt.php')): ?> class="sel"<?php endif ?>
 			<i class="fa fa-key" aria-hidden="true"></i>
 			Сменить пароль

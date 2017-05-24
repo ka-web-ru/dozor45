@@ -92,3 +92,10 @@ aside > a.sel { background: rgba(0, 0, 0, 0.1); text-decoration: none; color: #f
 #iVK{
     width: 50%;
 }
+hr{
+    color: #5a8fbb;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #5a8fbb;
+    height: 3px;
+}

@@ -343,6 +343,40 @@ var admin =
 					admin.Error(res.responseText);
 				}
 			});
+	},
+	UpdateDiscont: function()
+	{
+		var disconttext1 = $("#iDiscText1").val();
+		var discontval1 = $("#iDiscVal1").val();
+		var disconttext2 = $("#iDiscText2").val();
+		var discontval2 = $("#iDiscVal2").val();
+		var disconttext3 = $("#iDiscText3").val();
+		var discontval3 = $("#iDiscVal3").val();
+		var disconttext4 = $("#iDiscText4").val();
+		var discontval4 = $("#iDiscVal4").val();
+		var disconttext5 = $("#iDiscText5").val();
+		var discontval5 = $("#iDiscVal5").val();
+		$.ajax(
+			{
+				type:"POST", cache: false, url: "/admin/post.php",
+				data: {type: 'discont', disconttext1: disconttext1, discontval1: discontval1, disconttext2: disconttext2, discontval2: discontval2, disconttext3: disconttext3, discontval3: discontval3, disconttext4: disconttext4, discontval4: discontval4, disconttext5: disconttext5, discontval5: discontval5},
+				success: function(res)
+				{
+					if(res.r)
+					{
+						if(res.r == 'f')
+							admin.Error(res.error);
+						else
+							location.reload();
+					}
+					else
+						admin.Error(res);
+				},
+				error: function(res)
+				{
+					admin.Error(res.responseText);
+				}
+			});
 	}
 
 

@@ -1,0 +1,20 @@
+https://cp.sprinthost.ru
+arteastru
+axisusugsi
+
+
+БД
+arteastru_dozor45
+
+пользователь БД
+arteastru_dozor
+пароль БД
+nB9Lz4V6
+
+http://test1.arteast-pro.ru/
+админка сайта dozor45
+dozor45
+12345678
+
+
+

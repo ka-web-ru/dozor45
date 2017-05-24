@@ -339,69 +339,98 @@ $revs = $dc->GetReviews(1);
                     <h2 class="discount-title red-text">АКЦИИ и бонусы</h2>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                    <div class="discount-image-left">
-                        <img src="/img/rumb.png" alt="">
-                        <span class="discount-image-text-left">скидка</br> 5%</span>
+            <?php if($dc->GetSetting("disconttext1") && $dc->GetSetting("discontval1")): ?>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                        <div class="discount-image-left">
+                            <img src="/img/rumb.png" alt="">
+                            <span class="discount-image-text-left">скидка</br> <?=$dc->GetSetting("discontval1")?></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-6 col-xs-6">
+                        <span class="discount-description-right">
+                            <?=$dc->GetSetting("disconttext1") ?></span>
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-8 col-sm-6 col-xs-6">
-                    <span class="discount-description-right">При стоимости оборудования</br> свыше 30 000 рублей</span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-md-8 col-sm-6 col-xs-6">
+            <?php endif; ?>
+            <?php if($dc->GetSetting("disconttext2") && $dc->GetSetting("discontval2")): ?>
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-6 col-xs-6">
                     <span class="discount-description-left">
                         <span class="discount-description-left-inner">
-                            При установке оборудования</br> по групповой заявке каждому клиенту
+                            <?=$dc->GetSetting("disconttext2") ?>
                         </span>
                     </span>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                    <div class="discount-image-right">
-                        <img src="/img/rumb.png" alt="">
-                        <span class="discount-image-text-right">скидка</br> 5%</span>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                        <div class="discount-image-right">
+                            <img src="/img/rumb.png" alt="">
+                            <span class="discount-image-text-right">
+                                скидка</br>
+                                <?=$dc->GetSetting("discontval2")?>
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                    <div class="discount-image-left">
-                        <img src="/img/rumb.png" alt="">
-                        <span class="discount-image-text-left">скидка</br> 5%</span>
+            <?php endif; ?>
+            <?php if($dc->GetSetting("disconttext3") && $dc->GetSetting("discontval3")): ?>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                        <div class="discount-image-left">
+                            <img src="/img/rumb.png" alt="">
+                            <span class="discount-image-text-left">
+                                скидка</br>
+                                <?=$dc->GetSetting("discontval3")?>
+                            </span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-8 col-md-8 col-sm-6 col-xs-6">
-                    <span class="discount-description-right">При заключении договора</br> на обслуживание на 12 месяцев</span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-md-8 col-sm-6 col-xs-6">
-                    <span class="discount-description-left">
-                        <span class="discount-description-left-inner">
-                            При установке оборудования</br> на дополнительный объект клиента
+                    <div class="col-lg-8 col-md-8 col-sm-6 col-xs-6">
+                        <span class="discount-description-right">
+                            <?=$dc->GetSetting("disconttext3") ?>
                         </span>
-                    </span>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                    <div class="discount-image-right">
-                        <img src="/img/rumb.png" alt="">
-                        <span class="discount-image-text-right">скидка</br> 10%</span>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                    <div class="discount-image-left">
-                        <img src="/img/rumb_orange.png" alt="">
-                        <span class="discount-image-text-orange-left"><span class="discount-image-text-orange-left-procent">30%</span></br> абонентской</br> платы</span>
+            <?php endif; ?>
+            <?php if($dc->GetSetting("disconttext4") && $dc->GetSetting("discontval4")): ?>
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-6 col-xs-6">
+                        <span class="discount-description-left">
+                            <span class="discount-description-left-inner">
+                                <?=$dc->GetSetting("disconttext4") ?>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                        <div class="discount-image-right">
+                            <img src="/img/rumb.png" alt="">
+                            <span class="discount-image-text-right">
+                                скидка</br>
+                                <?=$dc->GetSetting("discontval4")?>
+                            </span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-8 col-sm-6 col-xs-6">
-                    <span class="discount-description-right">Обслуживание объекта</br> менее 12 часов в дневное время</span>
+            <?php endif; ?>
+            <?php if($dc->GetSetting("disconttext5") && $dc->GetSetting("discontval5")): ?>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                        <div class="discount-image-left">
+                            <img src="/img/rumb_orange.png" alt="">
+                            <span class="discount-image-text-orange-left">
+                                <span class="discount-image-text-orange-left-procent">
+                                     <?=$dc->GetSetting("discontval5")?>
+                                </span>
+                                </br> абонентской</br> платы
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-6 col-xs-6">
+                        <span class="discount-description-right">
+                            <?=$dc->GetSetting("disconttext5") ?>
+                        </span>
+                    </div>
                 </div>
-            </div>
+            <?php endif; ?>
         </div>
     </div>
     <div class="feedback-wrapper">

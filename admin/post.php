@@ -143,4 +143,30 @@ if($_POST['type'] == 'contacts')
 	)
 		$item['r'] = 's';
 }
+if($_POST['type'] == 'discont')
+{
+	$disconttext1 = $_POST['disconttext1'];
+	$discontval1 = $_POST['discontval1'];
+	$disconttext2 = $_POST['disconttext2'];
+	$discontval2 = $_POST['discontval2'];
+	$disconttext3 = $_POST['disconttext3'];
+	$discontval3 = $_POST['discontval3'];
+	$disconttext4 = $_POST['disconttext4'];
+	$discontval4 = $_POST['discontval4'];
+	$disconttext5 = $_POST['disconttext5'];
+	$discontval5 = $_POST['discontval5'];
+
+	if($dc->AddSetting('disconttext1', $disconttext1)
+		&& $dc->AddSetting('discontval1', $discontval1)
+		&& $dc->AddSetting('disconttext2', $disconttext2)
+		&& $dc->AddSetting('discontval2', $discontval2)
+		&& $dc->AddSetting('disconttext3', $disconttext3)
+		&& $dc->AddSetting('discontval3', $discontval3)
+		&& $dc->AddSetting('disconttext4', $disconttext4)
+		&& $dc->AddSetting('discontval4', $discontval4)
+		&& $dc->AddSetting('disconttext5', $disconttext5)
+		&& $dc->AddSetting('discontval5', $discontval5)
+	)
+		$item['r'] = 's';
+}
 echo json_encode($item);
