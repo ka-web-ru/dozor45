@@ -27,43 +27,43 @@ if(!isset($_SESSION['login']) || $_SESSION['login'] == 0)
             </div>
             <div class="form-group">
                 <label for="comment">Скидка:</label>
-                <input class="form-control" id="iDiscVal1" value=<?= $dc->GetSetting('discontval1') ?> >
+                <input class="form-control" id="iDiscVal1" value="<?= $dc->GetSetting('discontval1') ?>" >
             </div>
             <hr>
             <div class="form-group">
                 <label for="comment">Акция (текст):</label>
-                <input class="form-control" id="iDiscText2" value=<?= $dc->GetSetting('disconttext2') ?> >
+                <input class="form-control" id="iDiscText2" value="<?= $dc->GetSetting('disconttext2') ?>" >
             </div>
             <div class="form-group">
                 <label for="comment">Скидка:</label>
-                <input class="form-control" id="iDiscVal2" value=<?= $dc->GetSetting('discontval2') ?> >
+                <input class="form-control" id="iDiscVal2" value="<?= $dc->GetSetting('discontval2') ?>" >
             </div>
             <hr>
             <div class="form-group">
                 <label for="comment">Акция (текст):</label>
-                <input class="form-control" id="iDiscText3" value=<?= $dc->GetSetting('disconttext3') ?> >
+                <input class="form-control" id="iDiscText3" value="<?= $dc->GetSetting('disconttext3') ?>" >
             </div>
             <div class="form-group">
                 <label for="comment">Скидка:</label>
-                <input class="form-control" id="iDiscVal3" value=<?= $dc->GetSetting('discontval3') ?> >
+                <input class="form-control" id="iDiscVal3" value="<?= $dc->GetSetting('discontval3') ?>" >
             </div>
             <hr>
             <div class="form-group">
                 <label for="comment">Акция (текст):</label>
-                <input class="form-control" id="iDiscText4" value=<?= $dc->GetSetting('disconttext4') ?> >
+                <input class="form-control" id="iDiscText4" value="<?= $dc->GetSetting('disconttext4') ?>" >
             </div>
             <div class="form-group">
                 <label for="comment">Скидка:</label>
-                <input class="form-control" id="iDiscVal4" value=<?= $dc->GetSetting('discontval4') ?> >
+                <input class="form-control" id="iDiscVal4" value="<?= $dc->GetSetting('discontval4') ?>" >
             </div>
             <hr>
             <div class="form-group">
                 <label for="comment">Акция (текст):</label>
-                <input class="form-control" id="iDiscText5" value=<?= $dc->GetSetting('disconttext5') ?> >
+                <input class="form-control" id="iDiscText5" value="<?= $dc->GetSetting('disconttext5') ?>" >
             </div>
             <div class="form-group">
                 <label for="comment">Скидка:</label>
-                <input class="form-control" id="iDiscVal5" value=<?= $dc->GetSetting('discontval5') ?> >
+                <input class="form-control" id="iDiscVal5" value="<?= $dc->GetSetting('discontval5') ?>" >
             </div>
             <button type="button" class="btn btn-success" onclick="admin.UpdateDiscont()">Сохранить</button>
         </div>
